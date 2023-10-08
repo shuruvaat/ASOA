@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Authentication</title>
+    </head>
+    <body>
+        
+
+        <h3>Welcome to the community app</h3>
+
+        {% if user.is_authenticated %}
+        <h3>Hello {{first_name}}</h3>
+        <button type="submit"><a href="/signout">Signout</a></button>
+
+
+        {% else %}
+        <p>log in to access the app</p>
+        <button type="submit"><a href="/signup">Signup</a></button>
+        <button type="submit"><a href="/signin">Signin</a></button>
+
+        {% endif %}
+        
+    </body>
+</html>
